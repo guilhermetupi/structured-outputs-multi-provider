@@ -104,7 +104,7 @@ DEEPSEEK_OUTPUT_COST=1.10
 ### Modo Bench (compara todos os provedores)
 
 ```bash
-uv run structured-outputs-multi-provider --bench --prompt "Estou muito feliz com a vitória do Santos!"
+uv run structured-outputs-multi-provider --bench --prompt "Seu prompt aqui"
 ```
 
 Saída:
@@ -117,16 +117,16 @@ GemmaAdapter execute
 
 Resultados salvos em `data/result_<timestamp>.csv`:
 
-| provider | feeling | topics | summary | latency | tokens | cost | error |
-|----------|---------|--------|---------|---------|--------|------|-------|
-| DEEPSEEK | positive | Santos, vitória | O usuário está feliz... | 1234.5 | 150 | 0.000165 | |
-| GEMINI | positive | Santos, vitória | O usuário está feliz... | 890.2 | 95 | 0.000057 | |
-| GEMMA | positive | Santos, vitória | O usuário está feliz... | 1500.1 | 220 | 0.0 | |
+| provider | feeling | topics    | summary       | latency | tokens | cost | error |
+|----------|---------|-----------|---------------|---------|--------|------|-------|
+| DEEPSEEK | positive | Prompt | Seu prompt... | 1234.5 | 150 | 0.000165 | |
+| GEMINI | positive | Prompt| Seu prompt... | 890.2 | 95 | 0.000057 | |
+| GEMMA | positive | Prompt| Seu prompt... | 1500.1 | 220 | 0.0 | |
 
 ### Modo Chain (primeiro que responder)
 
 ```bash
-uv run structured-outputs-multi-provider --prompt "Estou muito feliz com a vitória do Santos!"
+uv run structured-outputs-multi-provider --prompt "Seu prompt aqui"
 ```
 
 Tenta Gemma primeiro, depois DeepSeek, depois Gemini. Para no primeiro sucesso.
